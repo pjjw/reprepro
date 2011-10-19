@@ -18,10 +18,10 @@
 #include <errno.h>
 #include <assert.h>
 #include <stdio.h>
+#include <search.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <malloc.h>
 #include <string.h>
 #include <strings.h>
 #include <ctype.h>
@@ -68,8 +68,9 @@ void override_free(struct overridefile *info) {
 
 	if (info == NULL)
 		return;
-
+#ifdef HAVE_TDESTROY
 	tdestroy(info->packages, freeoverridepackage);
+#endif
 	while ((i = info->patterns) != NULL) {
 		if (i == NULL)
 			return;

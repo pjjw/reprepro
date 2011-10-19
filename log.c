@@ -31,7 +31,6 @@
 #include <signal.h>
 #include <stdio.h>
 #include <time.h>
-#include <malloc.h>
 #include "error.h"
 #include "strlist.h"
 #include "atoms.h"
@@ -126,7 +125,7 @@ static retvalue logfile_open(struct logfile *logfile) {
 
 	(void)dirs_make_parent(logfile->filename);
 	logfile->fd = open(logfile->filename,
-			O_CREAT|O_APPEND|O_LARGEFILE|O_NOCTTY|O_WRONLY,
+			O_CREAT|O_APPEND|O_NOCTTY|O_WRONLY,
 			0666);
 	if (logfile->fd < 0) {
 		int e = errno;
