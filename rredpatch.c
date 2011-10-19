@@ -743,9 +743,8 @@ retvalue modification_addstuff(const char *source, struct modification **patch_p
 	}
 	do {
 #ifndef HAVE_GETLINE
-    errno = 0;
     line = fgetln(i, &bufsize);
-    got = errno;
+    got = strlen(line);
 #else
 		got = getline(&line, &bufsize, i);
 #endif
