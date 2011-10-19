@@ -56,7 +56,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <malloc.h>
 #include <string.h>
 #include <ctype.h>
 #include <fcntl.h>

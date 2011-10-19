@@ -17,8 +17,8 @@
 
 #include <assert.h>
 #include <string.h>
-#include <malloc.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "error.h"
 #include "mprintf.h"
 #include "strlist.h"

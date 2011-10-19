@@ -21,7 +21,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <malloc.h>
 #include <string.h>
 #include <strings.h>
 #include <ctype.h>
@@ -66,12 +65,13 @@ static void freeoverridepackage(void *n) {
 void override_free(struct overridefile *info) {
 	struct overridepattern *i;
 
-	if( info == NULL )
+	if (info == NULL)
 		return;
-
+#ifdef HAVE_TDESTROY
 	tdestroy(info->packages, freeoverridepackage);
-	while( (i = info->patterns) != NULL ) {
-		if( i == NULL )
+#endif
+	while ((i = info->patterns) != NULL) {
+		if (i == NULL)
 			return;
 		strlist_done(&i->data.fields);
 		free(i->pattern);

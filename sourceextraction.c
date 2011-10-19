@@ -19,7 +19,6 @@
 #include <assert.h>
 #include <limits.h>
 #include <stdlib.h>
-#include <malloc.h>
 #include <string.h>
 #include <stdio.h>
 #ifdef HAVE_LIBARCHIVE
@@ -32,6 +31,7 @@
 #include "chunks.h"
 #include "uncompression.h"
 #include "sourceextraction.h"
+#include "mprintf.h"
 
 struct sourceextraction {
 	bool failed, completed;

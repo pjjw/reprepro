@@ -9,6 +9,9 @@
 /* Define to 1 if you have the `dprintf' function. */
 #undef HAVE_DPRINTF
 
+/* Define to 1 if you have the `getline' function. */
+#undef HAVE_GETLINE
+
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 

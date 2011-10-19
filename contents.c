@@ -20,9 +20,11 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
 #include <string.h>
 #include <ctype.h>
+#ifdef __APPLE__
+#include <sys/types.h>
+#endif
 #include "error.h"
 #include "mprintf.h"
 #include "chunks.h"

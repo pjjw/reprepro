@@ -22,7 +22,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
-#include <malloc.h>
 #include <ctype.h>
 
 #include "error.h"
@@ -31,6 +30,7 @@
 #include "target.h"
 #include "distribution.h"
 #include "printlistformat.h"
+#include "mprintf.h"
 
 retvalue listformat_print(const char *listformat, const struct target *target, const char *package, const char *control) {
 	retvalue r;
