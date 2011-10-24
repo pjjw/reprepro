@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <config.h>
 
 #ifndef HAVE_GETLINE
 size_t getline(char **lineptr, size_t *n, FILE *stream) {
