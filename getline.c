@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef HAVE_GETLINE
 size_t getline(char **lineptr, size_t *n, FILE *stream) {
     char *bufptr = NULL;
     char *p = bufptr;
@@ -52,3 +53,4 @@ size_t getline(char **lineptr, size_t *n, FILE *stream) {
 
     return p - bufptr - 1;
 }
+#endif
